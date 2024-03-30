@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/css/styles.css">
+            <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+        <title>Portfolio website complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Sabit Ranjan</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Resume</a></li>
+                        <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#foo" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Sabit Ranjan</span></h1>
+                    
+                    <!-- Element to contain animated typing -->
+                    <!-- Element to contain animated typing -->
+<div id="typing-animation"></div>
+
+<style>
+    #typing-animation h1 {
+        display: inline; /* Make <h1> elements inline */
+        font-size: 2em; /* Increase font size */
+    }
+</style>
+
+<script>
+    // Initialize the typing animation
+    const typingAnimationElement = document.getElementById('typing-animation');
+
+    // Create an array of typing text
+    const typingTexts = [
+        'Data Analyst  ',
+        'Data Engineer   ',
+        'Data Scientist  ',
+    ];
+
+    // Create a function to display the typing animation for a given text
+    function playTypingAnimation(text) {
+        // Loop through each character and add it to the element
+        for (let i = 0; i < text.length; i++) {
+            setTimeout(() => {
+                typingAnimationElement.innerHTML += `<h1>${text[i]}</h1>`;
+            }, i * 200); // Increase the delay to slow down the typing animation
+        }
+
+        // Once the animation is complete, reset the text and start over
+        setTimeout(() => {
+            typingAnimationElement.innerHTML = '';
+            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+        }, text.length * 200);
+    }
+
+    // Start the typing animation loop
+    playTypingAnimation(typingTexts[0]);
+</script>
+
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/sabit-ranjan/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/sabitranjansahoo" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <!-- <a href="" class="home__social-icon"><i class='bx bxl-twitter' ></i></a> -->
+            
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets\img\[removal.ai]_87dde602-ea21-4df5-97c3-30b764b22909-img-20230318-wa0023-02-1_GDDW1Y.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets\img\IMG-20230318-WA0023-01-01.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h2 class="about__subtitle">I'am Sabit Ranjan</h2>
+                        <p style="text-align: justify;" class="about__text">I am a passionate Data Analyst, eager to embark on an impactful journey in the realm of data science. Armed with a degree in Electronics and Communication Engineering from Guru Ghasidas Vishwavidyalaya, I've cultivated a strong foundation in mathematics and statistics, fueling my fascination with uncovering insights from complex datasets. With a CGPA of 7.88 out of 10.00, I've demonstrated my commitment to academic excellence. Proficient in SQL, Python, and data visualization tools like PowerBI, I possess the technical acumen to dissect data and inform strategic decisions. My adeptness in statistical analysis allows me to craft data-driven solutions that drive operational efficiency. As a skilled communicator, I excel in translating technical findings into actionable strategies. I am eager to collaborate and leverage the power of data to drive transformative change for your organization.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Resume</h2>
+                    <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle stitle">Work Experience</h2>
+                        <h4 class="skills__subtitle">1. Data Analyst Internship at MedTourEasy.</h4>
+                        <p align = "right" class="skills__text"><em>August 2023 [Remote]</em></p>
+                        <p align= "justify" class="skills__text">During my internship at MedTour Easy, I led a data analysis and visualization project using Python, SQL, and Tableau, uncovering a significant 20% increase in patients from neighboring countries. This discovery informed our strategic decision to expand into new markets. Collaborating with cross-functional teams, we ensured data accuracy through thorough cleaning processes. Leveraging Tableau, I created visually engaging representations of our insights, facilitating effective communication with stakeholders and driving informed strategic decisions. This experience reinforced the importance of data-driven decision-making, collaboration, and effective communication in driving organizational success within the medical tourism industry.</p>
+                        <h4 class="skills__subtitle">2. Summer Training at CSPDCL.</h4>
+                        <p align = "right" class="skills__text"><em>May 2022- June 2022 [Bilaspur, CG]</em></p>
+                        <p align= "justify" class="skills__text">
+                            Throughout my tenure, I acquired comprehensive knowledge of electrical grids and diverse system types. This included practical insights into the intricacies of power transmission components, sub-station systems, as well as fault detection and maintenance protocols. My hands-on experience provided valuable insights into the operational dynamics of electrical grids, equipping me with the expertise to navigate complex challenges and optimize system performance effectively.</p>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h2 class="skills__subtitle stitle">Academics</h2>
+                        <h4 class="skills__subtitle">Bachelor of Technology in Electronics and Communication Engineering</h4>
+                        <h5 class="skills__subtitle"><em>Institute of Technology, Guru Ghasidas Vishwavidyalaya (A Central
+                            University), Bilaspur, CG.</em></h5>
+                        <p align = "right" class="skills__text"><em>August 2019 - May 2023</em></p>
+                        <p align= "justify" class="skills__text">My time at Guru Ghasidas Vishwavidyalaya was a transformative journey where I excelled with a CGPA of <b>7.88 out of 10.00</b> in Electronics and Communication Engineering, yet my passion for data science led me to delve deeper into analytics. Balancing academic responsibilities with this newfound interest, I honed my skills in mathematics and statistics, driven by curiosity and a belief in data's power. Graduating armed with a degree and a wealth of experiences, I am ready to embrace the opportunities ahead, confident in my ability to drive change through the transformative potential of data analysis.</p>
+                        <h4 class="skills__subtitle">Higher Secondary Education (PCMB)</h4>
+                        <h5 class="skills__subtitle"><em>Kultikri S. C. High School, Kultikri, WB.</em></h5>
+                        <p align = "right" class="skills__text"><em>2018-2019</em></p>
+                        <p align= "justify" class="skills__text">During my 12th-grade education at Kultikri S. C. High School in Kultikri, West Bengal, I pursued a curriculum focused on Physics, Chemistry, Mathematics, and Biology (PCMB). Mathematics particularly captivated me, as I discovered its ability to narrate stories through numbers, fostering my critical thinking and logical skills. Moreover, my schooling experience honed my cooperative abilities through collaborative efforts with my peers. Evidenced by my achievement of securing <b>78%</b> in the West Bengal 12th Board exams, my time at Kultikri S. C. High School not only provided me with academic knowledge but also instilled in me essential life skills indispensable for success.</p>
+                    </div>
+                <div>
+                    <h2 class="skills__subtitle stitle">Professional Skills</h2>
+                    <!-- <p class="skills__text"> -->
+                        <!-- As a <b>Data Analyst</b>, I possess a diverse range of professional skills tailored to uncovering insights and driving informed decision-making within organizations.</p> -->
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <!-- <i class='bx bxl-html5 skills__icon'></i> -->
+                            <img class="bx bxl-html5 skills__icon" style="height: 25px;" src="./assets/img/analysispng.png" alt="">
+                                <span class="skills__name"> DATA ANALYSIS</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!-- <i class='bx bxl-css3 skills__icon'></i> -->
+                                <img class="bx bxl-html5 skills__icon" style="height: 25px;" src="./assets/img/python.png" alt="">
+                                <span class="skills__name">SQL & PYTHON</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!-- <i class='bx bxl-javascript skills__icon' ></i> -->
+                                <img class="bx bxl-html5 skills__icon" style="height: 25px;" src="./assets/img/visualization.png" alt="">
+                                <span class="skills__name">DATA VISUALIZATION</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <!-- <i class='bx bxs-paint skills__icon'></i> -->
+                                <img class="bx bxl-html5 skills__icon" style="height: 25px;" src="./assets/img/communication.png" alt="">
+                                <span class="skills__name">COMMUNICATION</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <!-- <img src="assets/img/Best_Data_Analytics_Tools_-_article_image.jpg" alt="" class="skills__img"> -->
+                        <br>
+                        <br>
+                        <h2 class="skills__subtitle stitle">Additional Skills</h2>
+                        <ul style="text-align: justify;">
+                            <li class="d-flex"><span><b>Profile:</b></span> <span>Data Science &amp; Analytics, Business Analytics</span></li>
+                            <br>
+                            <li class="d-flex"><span><b>Domain:</b></span> <span>Retail, Ecommerce, BFSI &amp; Sports and Entertainment</span></li><br>
+                            <li class="d-flex"><span><b>Education:</b></span> <span>Bachelor of Technology in Electronics &amp; Communication Engineering</span></li><br>
+                            <li class="d-flex"><span><b>Language:</b></span> <span>English, Hindi, Bengali (Native)</span></li><br>
+                            <li class="d-flex"><span><b>BI Tools:</b></span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li><br>
+                            <li class="d-flex"><span><b>Other Skills:</b></span> <span>Cloud, PySpark, Excel, Git, Google Analytics</span></li><br>
+                            <li class="d-flex"><span><b>Interest:</b></span> <span>Traveling, Photography, Cricket</span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-outline-primary">Primary</button> -->
+                <br>
+                <br>
+                <a href = "https://drive.google.com/file/d/14eXGvzSVBidkOSgr0SP3CXcqVonilfmq/view?usp=sharing" ><button id="cv" type="submit">Download CV</button></a>
+                
+
+            </section>
+            
+            <!--=====Certifications-->
+            <section class="work section" id="certifications">
+                <h2 class="section-title">Certifications</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Google Data Analytics.</h4>
+                          <br>
+                          <!-- <p align = "right"><em>August 2023</em></p> -->
+                          <p align= "justify" class="card-text">Gain insight into the daily tasks of a junior data analyst, mastering essential skills such as data cleaning, analysis, and visualization using tools like spreadsheets, SQL, R programming, and Tableau to organize, analyze, and present data effectively.</p>
+                          <br>
+                          <a href="https://coursera.org/share/79199c9f73cfd357728525ae723b2c89" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Data Analysis with R Programming.</h4>
+                          <p align="justify" class="card-text">Embark on a comprehensive journey through R programming, exploring its environment, core concepts like functions, variables, and vectors, alongside visualization options, while mastering basic formatting in R Markdown for clear and structured content creation.</p>
+                          <br>
+                          <a href="https://coursera.org/share/57f8e4447f6da077895dde6da056dfc2" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Foundations: Data, Data, Everywhere.</h4>
+                          <p align= "justify" class="card-text">
+                            Data analytics: Understand data, analyze it, and navigate its ecosystem. Analytical thinking solves problems, like optimizing processes. Spreadsheets, SQL, and visualization tools organize and present data. Data analysts interpret data for business decisions.</p>
+                          <a href="https://coursera.org/share/b16dc5d755364e540e2c42d4feb8e078" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Prepare Data for Exploration.</h4>
+                          <br>
+                          <p align= "justify" class="card-text">Consider purpose, ethics, sources, and feasibility in data collection; Biased data skews results, while unbiased data reflects reality; Databases store, manage, and retrieve data using tables, fields, and relationships; Best practices for data organization include consistent formats, clear labeling, and proper categorization.</p>
+                          <a href="https://coursera.org/share/a392eeec251a6a297a37e58cc91b1be2" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate5.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Share Data Through the Art of Visualization.</h4>
+                          <p align="justify" class="card-text">
+                            Data visualizations effectively communicate data insights; Tableau is a prominent tool for this purpose; data-driven stories are crucial narratives highlighting insights, while effective presentations rely on sound principles and practices.</p>
+                          <br>
+                          <br>
+                          <a href="https://coursera.org/share/52d7107817f9b084805336d0651df94a" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/certificate6.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Google Data Analytics Capstone: Complete a Case Study.</h4>
+                          <p align="justify" class="card-text">Capstone projects demonstrate holistic understanding, case studies showcase problem-solving, portfolios compile work; completed case studies highlight analysis techniques; these tools communicate skills to employers.</p>
+                          <br>
+                          <br>
+                          <br>
+                          <a href="https://coursera.org/share/8c56cbd43e77da1953fc972c2119b6d2" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/Movie Recommender System.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Movie Recommender System</h5>
+                          <br>
+                          <p align= "justify" class="card-text">Explore movies with the Movie Recommender System! Receive personalized recommendations by analyzing movie details. Select a movie and get five similar recommendations with detailed information and posters. Built with Python, Pandas, NumPy, Scikit-learn, Streamlit, Pickle, and Requests.</p>
+                          <br>
+                          <a href="https://github.com/sabitranjansahoo/movie_recommender_system" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/covid.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Covid-19 Impacts Analysis on the Global Economy</h5>
+                          <p align="justify" class="card-text">This project aims to visualize COVID-19 data using web scraping and visualization tools to empower informed decision-making and raise awareness amidst the pandemic's impact. By presenting data in an engaging format, it seeks to mitigate the virus's spread and address its socio-economic repercussions globally.</p>
+                          <a href="https://github.com/sabitranjansahoo/covid_19_impacts_analysis_on_the_global_economy" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/Breast Cancer.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Predictive System For Early Detection Of Breast Cancer</h5>
+                          <p align="justify" class="card-text">This project harnesses a Convolutional Neural Network (CNN) to classify mammogram images into normal, benign, or malignant categories with an outstanding accuracy of 99.97%, offering a promising avenue for improving breast cancer screening and diagnosis.</p>
+                          <br>
+                          <a href="https://github.com/sabitranjansahoo/predictive_system_for_early_detection_of_breast_cancer" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/right hand.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Analyze Death Age Difference of Right Handers with Left Handers</h5>
+                          <p align="justify" class="card-text">This project investigates the link between hand preference (left or right-handedness) and lifespan, using Bayesian statistics and data visualization to examine if left-handed individuals have shorter lifespans. Its findings could inform tailored healthcare solutions for MedTourEasy, boosting customer satisfaction and global competitiveness.</p>
+                          <a href="https://github.com/sabitranjansahoo/analyze_death_age_difference_of_right_handers_with_left_handers" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./assets/img/video to text.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Video to Text Extractor</h5>
+                          <p align="justify" class="card-text">The Video to Text Extractor is a Python app using speech recognition to extract text from videos via a user-friendly interface. It allows browsing, selecting videos, and saving transcribed text for analysis. Installation requires cloning the repo and installing dependencies with pip. Usage involves selecting a video, processing for speech recognition, and viewing the output text.</p>
+                          <a href="https://github.com/sabitranjansahoo/video_to_text_extractor" class="btn btn-primary">[Link]</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <!-- <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form"> -->
+                        <!-- <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea> -->
+                    
+                        <!-- <input type="button" value="Send" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main> -->
+
+        <!--===== FOOTER =====-->
+        <footer class="footer" id="foo">
+            <p class="footer__title">Sabit Ranjan Sahoo</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/sabit-ranjan/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/sabitranjansahoo" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <!-- <a href="#" class="footer__icon"><i class='bx bxl-whatsapp' ></i></a> -->
+            </div>
+            <p class="footer__cbitranjansahoo opy"> <h2>Contact Us</h2> <h3>sabitranjansahoo@gmail.com</h3> <h4> +91-7602926558</h4><h4>Address : Kolkata, West Bengal.</h4></p>
+            <p>Copyright © 2024 Sabit Ranjan Sahoo. All Rights Reserved.</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
